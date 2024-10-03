@@ -1,4 +1,7 @@
 <script>
+  import { createEventDispatcher } from "svelte";
+  const dispatch = createEventDispatcher();
+
 	let name = "";
 	let firstInput = "";
 
@@ -16,6 +19,7 @@
 
 <style>
   button {
+    display: inline;
     border-radius: 8px;
     padding: 0.4rem 0.8rem;
   }
@@ -61,11 +65,20 @@
 			bind:this={firstInput}
 		/>
 	</label>
-	<button
-		type="reset"
-		disabled={!name}
-		on:click={resetClicked}
-	>
-		Reset
-	</button>
+  <section>
+    <button
+      type="reset"
+      disabled={!name}
+      on:click={resetClicked}
+    >
+      Reset
+    </button>
+    <button
+      type="submit"
+      disabled={!name.trim()}
+      on:click|preventDefault={() => dispatch('createQRCode', name.trim())}
+    >
+      Create QR Code
+    </button>
+  </section>
 </form>
