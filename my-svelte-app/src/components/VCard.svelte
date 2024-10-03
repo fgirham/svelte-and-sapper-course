@@ -69,6 +69,7 @@
 
   .card-details {
     padding: 1rem;
+    overflow-wrap: anywhere;
   }
 
   .name {
