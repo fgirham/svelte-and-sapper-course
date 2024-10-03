@@ -1,5 +1,16 @@
 <script>
   export let QRCode = "[YOUR NAME]";
+  export let values = {
+    name: "",
+    organisation: "",
+    jobTitle: "",
+    phone: "",
+    address: "",
+    email: "",
+    photoURL: "",
+    logoURL: "",
+    backgroundURL: "",
+  }
 </script>
 
 <style>
@@ -191,8 +202,7 @@
       </div>
       <div class="skills">
         <span class="value"
-          >Immeasurable Physical Prowess, Supernatural Reflexes and Senses,
-          Invulnerability, Indomitable Will, Enhanced Fighting Skill</span
+          >{values.name} {values.organisation} {values.jobTitle} {values.phone} {values.address} {values.email} {values.photoURL} {values.logoURL} {values.backgroundURL}</span
         >
       </div>
     </div>
