@@ -15,6 +15,10 @@
 </script>
 
 <style>
+  button {
+    border-radius: 8px;
+    padding: 0.4rem 0.8rem;
+  }
   form {
     display: flex;
     flex-direction: column;
