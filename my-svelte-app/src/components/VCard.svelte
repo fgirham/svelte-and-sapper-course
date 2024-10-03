@@ -1,5 +1,5 @@
 <script>
-  export let QRCode = "ABCDEFG";
+  export let QRCode = "[YOUR NAME]";
 </script>
 
 <style>

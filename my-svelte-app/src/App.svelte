@@ -3,9 +3,12 @@
 	import Form from "./components/Form.svelte";
 	import VCard from "./components/VCard.svelte";
 
-	let QRCode = "";
+	let QRCode = "[YOUR NAME]";
 </script>
 
 <Navbar title="vCard Generator" />
-<Form on:createQRCode={e => { QRCode = e.detail }}/>
-<VCard {QRCode} />
+
+<main>
+	<Form on:createQRCode={e => { QRCode = e.detail }}/>
+	<VCard {QRCode} />
+</main>
